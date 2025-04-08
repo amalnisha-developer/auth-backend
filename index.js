@@ -9,8 +9,8 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.get('/',()=>{
-    console.log('sucessful')
+app.get('/',(req,res)=>{
+    res.send('sucessful')
 })
 app.use("/api/auth", authRoutes);
 
