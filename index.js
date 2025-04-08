@@ -9,7 +9,9 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-
+app.get('/',()=>{
+    console.log('sucessful')
+})
 app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
